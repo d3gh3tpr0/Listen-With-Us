@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;    
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    width: 50%;
+    height: 80px;
+    background-color: rgb(46, 47, 48);
+    color: white;
+    box-sizing: border-box;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+.login{
+    justify-content: flex-end;
+    padding-right: 20px
+}
+.brand img{
+    max-width: 150px;
+    height: auto;
+    padding: 0 8px;
+}
+#enter_login{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    height: 30px;
+}
+#username, #password{
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 23px auto;
+   width: 80%;
+   border-radius: 12px;
+   padding: 34px;
+   background-image: url('bg.jpg');
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: rgb(26, 25, 25);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.icons{
+    margin-top: 14px; 
+    display: flex;
+    align-items: center;
+}
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 60px;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+    margin-top: 15px;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  }
+#searchBar{
+    width: 98%;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.volumeBar{
+    position: absolute;
+    right: 20vw;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.volumeIcon{
+    margin-right: 10px;
+    cursor: pointer;
+}
+#volumeControl{
+    cursor: pointer;
+}
+#random{
+    margin-right: 10px;
+}
+#repeat{
+    margin-left: 10px;
+}
+.style-repeat{
+    color: #e26dff;
+}
+.register-button{
+    margin-right: 20px;
+    border-right: 4px solid #e26dff;
+    padding-right: 16px;
+}
+.login-button{
+    margin-right: 15px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    margin-bottom: 70px;
+ 
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+.modal__body{
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+.auth-form__header{
+    display: flex;
+    justify-content: space-between;
+}
+.auth-form__form{
+    display: flex;
+    flex-direction:  column;
+    margin-top: 5px
+}
+.active{
+    display: none;
+}
+.auth-form__heading{
+    font-size: 2.2rem;
+}
+.auth-form__input{
+    width: 100%;
+    height: 35px;
+    margin-top: 15px;
+    padding-left: 15px;
+    font-size: 1rem;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+.auth-form__aside{
+    margin-top: 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.auth-form__control{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__control .btn{
+    margin-left: 20px;
+    width: 30%;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.auth-form__control .btn:hover{
+    background-color: orange;
+}
+.auth-form__socials{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.auth-form__switch-btn:hover{
+    color: red;
+}
+.auth-form__logo{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
