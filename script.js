@@ -33,7 +33,7 @@ const displayMusicTag = (songs) =>{
         <div class="songItem">
             <img alt="1" src="${song.coverPath}">
             <span class="songName">${song.songName}</span>
-            <span class="songlistplay"><span class="timestamp">05:34 <i id=${index} class="far songItemPlay fa-play-circle"></i> </span></span>
+            <span class="songlistplay"><span class="timestamp"><i id=${index} class="far songItemPlay fa-play-circle"></i> </span></span>
         </div>
     `;
     })
@@ -46,6 +46,7 @@ searchBar.addEventListener('keyup', (e) =>{
     const searchString = e.target.value.toLowerCase();
     const filterMusicTags = songs.filter((song)=>{
         return (
+            
             song.songName.toLowerCase().includes(searchString)
         )
     })
@@ -232,6 +233,7 @@ audioElement.onended = ()=>{
 
 let register_button = document.querySelector('.register-button');
 let modal = document.querySelector('.modal');
+
 register_button.addEventListener('click', ()=>{
     modal.classList.toggle('active');
     modal.innerHTML = `<div class="modal__overlay"></div>
@@ -306,10 +308,10 @@ login_button.addEventListener('click', () => {
 
                 <div class="auth-form__form">
                     <div class="auth-form_group">
-                        <input type="text" class="auth-form__input" placeholder="Enter your email">
+                        <input type="text" class="auth-form__input" placeholder="Enter your email" id="username">
                     </div>
                     <div class="auth-form__group">
-                        <input type="password" class="auth-form__input" placeholder="Enter your password">
+                        <input type="password" class="auth-form__input" placeholder="Enter your password" id="password">
                     </div>
             
                 </div>
@@ -338,10 +340,38 @@ login_button.addEventListener('click', () => {
         </div>
                         </div>`;
     let click_overlay = document.querySelector('.modal__overlay');
-        click_overlay.addEventListener('click', () => {
+    click_overlay.addEventListener('click', () => {
         modal.classList.toggle('active');
     });
+
+    let click_login = document.querySelector('.btn--primary');
+    
+    click_login.addEventListener('click', () => {
+        let username = document.querySelector('#username').value;
+        let password = document.querySelector('#password').value;
+        if (username == "admin" && password=="admin"){
+            modal.classList.toggle('active');
+            let login_board = document.querySelector('.login');
+            login_board.classList.toggle('active');
+            let user = document.querySelector('.user-info');
+            user.classList.toggle('active');
+        }
+    });
+
 });
+
+let logout_btn = document.querySelector('.logout-button');
+if (logout_btn!=null) {
+    logout_btn.addEventListener('click', () =>{
+        let login_board = document.querySelector('.login');
+        login_board.classList.toggle('active');
+        let user = document.querySelector('.user-info');
+        user.classList.toggle('active');
+        check_login = false;
+    });
+
+}
+
 
 
 /*
