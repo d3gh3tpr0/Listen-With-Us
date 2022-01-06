@@ -35,6 +35,10 @@ nav ul li{
     justify-content: flex-end;
     padding-right: 20px
 }
+.user-info{
+    justify-content: flex-end;
+    padding-right: 50px;
+}
 .brand img{
     max-width: 150px;
     height: auto;
@@ -268,4 +272,7 @@ nav ul li{
     height: 100px;
     display: flex;
     justify-content: center;
+}
+.auth-form__control .btn--primary{
+    background-color: #94bb1db8;
 }
